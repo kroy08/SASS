@@ -1,0 +1,14 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.product{
+    padding: 3rem;
+
+    &__wrapper {
+        @include grid (2, 3rem);
+    }
+    &__img{
+        @include grid (3, 3rem);
+    }
+            
+}   

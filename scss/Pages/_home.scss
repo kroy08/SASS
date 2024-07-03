@@ -39,6 +39,9 @@
     }
     &__wrapper{
         @include grid(3, 1rem);
+        @include  mediaQuery(520px){
+            grid-template-columns: 1fr;
+        }
         img{
             width: 17rem;
         }
@@ -87,6 +90,12 @@
     &__wrapper{
         @include grid(2, 1rem);
         justify-items: center;
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+        }
+        br{
+            display: none;
+        }
     }
     &__content{
         ul{
@@ -111,11 +120,20 @@
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../IMG/book\ a\ table\ bg.jpg);
         @include bgImgSize;
         height: 120vh;
+        @include mediaQuery(520px){
+            background: none;
+            height: auto;
+            transform: translateY(-10rem);
+        }
     }
     &__table {
         padding: 5rem;
         width: 60rem;
         height: 45rem;
+        @include mediaQuery(520px){
+            width: 100%;
+            padding: 0;
+        }
         h4 {
             font-size: 2rem;
         }
@@ -184,5 +202,37 @@
 .video{
     &__wrapper{
         @include centerAll;
+    }
+}
+
+// blog
+.homeBlog {
+    padding: 5rem 0;
+    &__title{
+        @include centerAll;
+        flex-direction: column;
+        h2 {
+            margin-bottom: 0.5rem;
+        }
+
+    }
+    &__wrapper{
+        @include grid(3, 5rem);
+        @include mediaQuery(520px) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+       
+    }
+
+    &__card {
+        img {
+            margin-bottom: 2rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            padding-bottom: 1rem;
+        }
     }
 }

@@ -7,24 +7,34 @@
     <link rel="stylesheet" href="./dist/css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- HEADER -->
-     <header class="header bg--dark position--fixed">
+     <header class="header bg--dark">
         <div class="container">
             <div class="header__wrapper">
                 <img src="./IMG/81240106-logo1.png" alt="">
                 <nav>
                     <ul class="header__nav">
                         <li><a href="">Home</a></li>
-                        <li><a href="">Mune</a></li>
+                        <li><a href="">Menu</a></li>
                         <li><a href="">Chefs</a></li>
                         <li><a href="">Product</a></li>
                         <li><a href="">Blog</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="toggle__menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
      </header>
@@ -32,7 +42,7 @@
      <!-- Banner -->
      <section class="homeBanner bg--dark">
         <div class="container">
-            <div class="homeBanner__wrapper">
+            <div class="homeBanner__wrapper  animate__animated animate__flash">
                 <h4>IRRESISTTIBLY GOOD</h4>
                 <h1>The Rich Taste of Indian Flavors</h1>
                 <p class="mb--3">Enjoy the taste of the best and most authentic Indian cuisines that are guaranted to make <br> you want more with each bite!
@@ -281,9 +291,88 @@
                 </div>
             </div>
           </section>
+
+          <!-- blog -->
+           <section class="homeBlog bg--primary py--5">
+            <div class="container">
+                <div class="homeBlog__title pb--2">
+                    <h2 class="title t-align--center">For Our Blog</h2>
+                    <p>Keep up with our latest food trends, and other updates  and news from<br>our fun blogs and articles that explore the  world of Indian cuisine.</p>
+                </div>
+                    <div class="homeBlog__wrapper " data-aos="zoom-in">
+                        <div class="homeBlog__card">
+                            <img src="./IMG/ramen.png" alt="">
+                            <h3>An Indian Version Of Ramen</h3>
+                            <p>Amet minim mollit non deserunt ullamco est aliqua although  dolor  domett sint. Velit ther sequat duis enim velit mollit xercotation.</p>
+                        </div>
+                        <div class="homeBlog__card">
+                            <img src="./IMG/pasta.jpg" alt="">
+                            <h3>Art Of Making Pasta Perfectly</h3>
+                            <p>Amet minim mollit non deserunt ullamco est aliqua although  dolor  domett sint. Velit ther sequat duis enim velit mollit xercotation.</p>
+                        </div>
+                        <div class="homeBlog__card">
+                            <img src="./IMG/chicken at home.jpg" alt="">
+                            <h3>Make Grilled  Chicken At Home</h3>
+                            <p>Amet minim mollit non deserunt ullamco est aliqua although  dolor  domett sint. Velit ther sequat duis enim velit mollit xercotation.</p>
+                        </div>
+                    </div>            
+            </div>
+           </section>
+
+           <!-- footer -->
+        <footer class="footer bg--dark py--5">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <!-- 1 -->
+                    <ul>
+                        <li><img src="./IMG/81240106-logo1.png" alt=""></li>
+                        <li><span>Phone: </span>407-509-3646</li>
+                        <li><span>Mail: </span>sketchix@support.com</li>
+                        <li><span>Address: </span>16122 Collins Street West Victoria 8265 Australia</li>
+                    </ul>
+                    <!-- 2 -->
+                    <ul>
+                        <li><h4 class="mb--2">Useful Link</h4></li>
+                        <li>About Us</li>
+                        <li>Food Menu</li>
+                        <li>My Account</li>
+                        <li>List a Item</li>
+                    </ul>
+                    <!-- 3 -->
+                    <ul>
+                        <li><h4 class="mb--2">Community</h4></li>
+                        <li>Map</li>
+                        <li>Store Location</li>
+                        <li>Photography</li>
+                        <li>Games</li>
+                        <li>Music</li>
+                    </ul>
+                    <!-- last Part -->
+                     <div class="footer__lastPart">
+                        <h4 class="mb--2">Community</h4>
+                        <div class="footer__subscribe">
+                            <input type="text" placeholder="Your Email Address" />
+                            <a href=""class="btn bg--footer">Subscribe</a>
+                        </div>
+                        <ul class="footer__social">
+                            <li>
+                                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            </li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+                        </ul>
+                     </div>
+                </div>
+                <p>©Copyright 2022.Powered by WPDeveloper</p>
+            </div>
+        </footer>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
          <script src="./JS/slider.js"></script>
-         
-
+         <script src="./JS/toggleMenu.js"></script>
+         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+         <script>
+            AOS.init();
+          </script>
 </body>
 </html>
