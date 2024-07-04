@@ -1,0 +1,128 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.contact{
+    &__wrapper{
+        text-align: center;
+        @include mediaQuery(520px) {
+            align-items: center;
+        }
+
+    
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+        gap: 3rem;
+        @include mediaQuery(520px){
+            flex-direction: column;
+        }
+        
+        i {
+            color: $clr-secondary;
+        }
+
+    }
+
+    &__map {
+        iframe{
+            border-radius: 1rem;
+            width: 50rem;
+            margin-bottom: 3rem;
+            @include mediaQuery(520px){
+                width: 20rem;
+            }
+        }
+    }
+
+    &__touch {
+        h2{
+            font-size: 2rem;
+        }
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__info {
+        input  {
+            width: 23.5rem;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            background-color: transparent;
+            border: 1px solid $clr-light;
+            border-radius: 1rem;
+            
+            &:focus,
+            &:enabled{
+                color: $clr-light;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        @include mediaQuery(520px) {
+            flex-direction: column;
+            gap: 0;
+            align-items: center;
+           
+        }
+
+        label{
+            text-align: justify;
+            margin-left: -18rem;
+            @include mediaQuery(520px) {
+                margin-left: -18rem;
+            }
+        }
+    }
+    &__info--2 {
+        label {
+            margin-left: -46rem;
+            @include mediaQuery(520px) {
+                margin-left: -19rem;
+            }
+            
+        }
+        input  {
+            width: 50rem;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            background-color: transparent;
+            border: 1px solid $clr-light;
+            border-radius: 1rem;
+            @include mediaQuery(520px) {
+                width: 23rem;
+                margin-left: -1.5rem;
+            }
+            &:focus,
+            &:enabled{
+                color: $clr-light;
+            }
+        }
+        textarea {
+            height: 10rem;
+            width: 50rem;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            background-color: transparent;
+            border: 1px solid $clr-light;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            @include mediaQuery(520px) {
+                width: 23rem;
+                margin-left: -1.5rem;
+            }
+            &:focus,
+            &:enabled{
+                color: $clr-light;
+            }
+        }  
+    }
+ 
+}

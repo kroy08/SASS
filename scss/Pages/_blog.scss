@@ -1,0 +1,39 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.blog{
+  
+
+    &__wrapper {
+        @include centerAll;
+        flex-direction:column;
+        @include mediaQuery(520px) {
+            justify-content: center;
+        }
+    }
+
+    &__image {
+        margin-top: 5rem;
+        
+        img {
+            width: 60rem;
+            border-radius: 2rem;
+            @include mediaQuery(520px){
+                width: 40rem;
+            }
+        }
+        h3 {
+            font-size: 2rem;
+            text-align: justify;
+        }
+        p{
+            text-align: justify;
+            margin-bottom: 2rem;
+        }
+        a{
+            margin-left: -55rem;
+            width: 5rem;
+        }
+    }
+
+}
